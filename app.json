@@ -1,15 +1,33 @@
 {
   "expo": {
-    "name": "NammaMove_AI",
-    "slug": "NammaMove_AI",
+    "name": "ನಮ್ಮ Bus",
+    "slug": "nammablr",
+    "scheme": "nammablr",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nammamove.ai",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ನಮ್ಮ Bus uses your location to discover nearby BMTC bus stops and provide accurate corridor ETAs."
+      },
+      "config": {
+        "googleMapsApiKey": ""
+      }
     },
     "android": {
+      "package": "com.nammamove.ai",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
+      },
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +38,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ನಮ್ಮ Bus uses the camera only for temporary identity verification. No photo or face data is stored.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
+    ]
   }
 }

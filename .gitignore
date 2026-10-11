@@ -31,7 +31,18 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
+.env.*
 .env*.local
+*.env
+backend/.env
+backend/.env.*
+
+# certificates & keys
+*.pem
+*.key
+*.cert
+*.crt
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +50,19 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Environment templates contain placeholders only and are committed
+!.env.example
+!backend/.env.example
+
+# Access module private document storage (encrypted uploads)
+backend/private_uploads/
+!backend/.env.access.example
+
+# Large ML model files (downloaded locally, see backend/app/access/README.md)
+backend/models/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/

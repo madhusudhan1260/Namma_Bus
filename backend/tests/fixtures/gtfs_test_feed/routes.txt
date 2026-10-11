@@ -1,0 +1,4 @@
+﻿route_id,route_short_name,route_long_name,route_type
+R1,T-100,Test Depot - Test Terminal,3
+R2,T-200,Test Terminal - Test Market,3
+BAD

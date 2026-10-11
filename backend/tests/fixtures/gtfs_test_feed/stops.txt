@@ -1,0 +1,5 @@
+stop_id,stop_name,stop_lat,stop_lon
+S1,Test Depot,12.95,77.60
+S2,Test Terminal,12.96,77.61
+S3,Test Market,12.97,77.62
+S4,Broken Stop,not-a-number,77.0

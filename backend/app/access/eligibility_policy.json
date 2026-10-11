@@ -1,0 +1,25 @@
+{
+  "policy_name": "Namma Bus configurable eligibility policy (development default)",
+  "disclaimer": "Configurable development policy. It is NOT an official BMTC or Government of Karnataka benefit rule; confirm the real scheme rules before production use.",
+  "face_verification_valid_seconds": 600,
+  "rules": [
+    {
+      "id": "female_identity_verified",
+      "enabled": true,
+      "eligibility_type": "FEMALE_IDENTITY_VERIFIED_FREE",
+      "applies_to": { "roles": ["PASSENGER", "STUDENT"] },
+      "requires": ["eligibility_not_suspended", "identity_verified", "identity_attested_female", "face_verified_recent"],
+      "fare_percent": 0,
+      "max_passengers": 1
+    },
+    {
+      "id": "student_bus_pass",
+      "enabled": true,
+      "eligibility_type": "STUDENT_FREE",
+      "applies_to": { "roles": ["STUDENT"] },
+      "requires": ["eligibility_not_suspended", "student_college_approved", "student_pass_approved", "student_pass_valid_today"],
+      "fare_percent": 0,
+      "max_passengers": 1
+    }
+  ]
+}
